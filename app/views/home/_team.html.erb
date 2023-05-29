@@ -1,0 +1,36 @@
+<section id="team">
+  <div class="wrapper">
+
+    <div class="section-title">
+      <h1 class="heading">Our hard working team</h1>
+      <div class="description"><%= @team.description %></div>
+    </div>
+
+    <div class="members">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <% @team.members.each do |member| %>
+            <div class="swiper-slide">
+              <div class="member">
+                <%= image_tag url_for(member.image), alt: 'Member Image' %>
+                <div class="member__detail">
+                  <h2 class="member__name"><%= member.name %></h2>
+                  <p class="member__place"><%= member.location %></p>
+                </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="swiper-buttons">
+        <div class="swiper-buttons__prev">
+          <i class="fa-solid fa-chevron-left"></i>
+        </div>
+        <div class="swiper-buttons__next">
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

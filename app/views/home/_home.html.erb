@@ -1,0 +1,26 @@
+<section id="home">
+  <div class="wrapper">
+    <div class="bg-circles">
+      <%= image_tag "bg-circle-1.svg", class: 'bg-circle-1' %>
+      <%= image_tag "bg-circle-2.svg", class: 'bg-circle-2' %>
+    </div>
+    <div class="bg-gradient"></div>
+    <div class="tag-line-1">
+      Get World Class
+    </div>
+    <div class="tag-line-2">
+      <span>Best Solution</span> From Us.
+    </div>
+
+    <div class="description">
+      <%= @home.description %>
+    </div>
+
+    <button>
+      <span>Get a Quote</span>
+      <i class="fa-solid fa-circle-chevron-right icon"></i>
+    </button>
+
+    <%= image_tag url_for(@home.image), class: 'hero-image', alt: 'Hero Image' %>
+  </div>
+</section>

@@ -1,0 +1,62 @@
+<section id="about">
+  <div class="wrapper">
+
+    <div class="column-1">
+      <h1 class="heading">About</h1>
+
+      <p class="description">
+        <%= @about.description %>
+      </p>
+
+      <div class="count-section">
+        <div class="project-complete">
+          <span class="count"><%= @about.project_completed_count %> +</span>
+          <span class="text">Project Completed</span>
+        </div>
+        <div class="happy-clients">
+          <span class="count"><%= @about.happy_clients_count %> +</span>
+          <span class="text">Happy Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="column-2">
+      <div class="bg-gradient"></div>
+      <div class="service service-1">
+        <%= image_tag url_for(@about.icon_one), class: 'icon', alt: 'Web Development' %>
+        <div class="content">
+          <h2><%= @about.title_one %></h2>
+          <span><%= @about.description_one %></span>
+        </div>
+      </div>
+
+      <div class="service service-2">
+        <%= image_tag url_for(@about.icon_two), class: 'icon', alt: 'App Development' %>
+        <div class="content">
+          <h2><%= @about.title_two %></h2>
+          <span><%= @about.description_two %></span>
+        </div>
+      </div>
+
+      <div class="service service-3">
+        <%= image_tag url_for(@about.icon_three), class: 'icon', alt: 'SEO' %>
+        <div class="content">
+          <h2><%= @about.title_three %></h2>
+          <span><%= @about.description_three %></span>
+        </div>
+      </div>
+
+      <div class="service service-4">
+        <%= image_tag url_for(@about.icon_four), class: 'icon', alt: 'Digital Marketing' %>
+        <div class="content">
+          <h2><%= @about.title_four %></h2>
+          <span><%= @about.description_four %></span>
+        </div>
+      </div>
+
+      <div class="diamond-circle">
+        <%= image_tag url_for(@about.diamond_icon), alt: 'Diamond' %>
+      </div>
+    </div>
+  </div>
+</section>
