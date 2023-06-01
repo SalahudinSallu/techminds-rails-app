@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_25_011957) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_01_214956) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -85,13 +85,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_25_011957) do
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.string "location"
     t.string "latitude"
     t.string "longitude"
     t.string "email"
     t.string "phone"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location_1"
+    t.string "location_2"
+    t.string "facebook_url"
+    t.string "instagram_url"
+    t.string "linkedin_url"
   end
 
   create_table "homes", force: :cascade do |t|
@@ -117,6 +121,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_25_011957) do
     t.bigint "portfolio_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean "hide_demo_link", default: false
     t.index ["portfolio_id"], name: "index_portfolio_items_on_portfolio_id"
   end
 

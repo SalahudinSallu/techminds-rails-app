@@ -16,10 +16,10 @@
       <%= @home.description %>
     </div>
 
-    <button>
+    <%= link_to "#contact" do %>
       <span>Get a Quote</span>
       <i class="fa-solid fa-circle-chevron-right icon"></i>
-    </button>
+    <% end %>
 
     <%= image_tag url_for(@home.image), class: 'hero-image', alt: 'Hero Image' %>
   </div>

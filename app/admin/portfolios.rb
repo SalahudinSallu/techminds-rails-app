@@ -14,7 +14,7 @@ ActiveAdmin.register Portfolio do
   #   permitted
   # end
   permit_params :description,
-                portfolio_items_attributes: %i[id title description image _destroy]
+                portfolio_items_attributes: %i[id title description image hide_demo_link _destroy]
 
   show do
     attributes_table do
@@ -42,6 +42,7 @@ ActiveAdmin.register Portfolio do
           a.input :title
           a.input :description
           a.input :image, as: :file
+          a.input :hide_demo_link, as: :boolean
         end
       end
     end
