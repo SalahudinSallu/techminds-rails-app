@@ -72,7 +72,7 @@ project.image.attach(
 
 team = Team.create(description: "Meet the Brilliant Minds Behind TechMinds' Success")
 
-member = Member.create(name: 'Ijaz Ahmad', role: 'Manager', location_i: 'Lahore, Pakistan', team:)
+member = Member.create(name: 'Ijaz Ahmad', role: 'Manager', location: 'Lahore, Pakistan', team:)
 
 member.image.attach(
   io: File.open(File.join(Rails.root, 'app/assets/images/member-1.png')),
