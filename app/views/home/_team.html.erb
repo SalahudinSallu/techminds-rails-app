@@ -22,15 +22,16 @@
           <% end %>
         </div>
       </div>
-
-      <div class="swiper-buttons">
-        <div class="swiper-buttons__prev">
-          <i class="fa-solid fa-chevron-left"></i>
+      <% if @team.members.count > 3 %>
+        <div class="swiper-buttons">
+          <div class="swiper-buttons__prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </div>
+          <div class="swiper-buttons__next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
         </div>
-        <div class="swiper-buttons__next">
-          <i class="fa-solid fa-chevron-right"></i>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </section>

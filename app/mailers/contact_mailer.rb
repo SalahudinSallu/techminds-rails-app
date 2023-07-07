@@ -5,6 +5,6 @@ class ContactMailer < ApplicationMailer
     @email_address = params[:email_address]
     @subject = params[:subject]
     @message = params[:message]
-    mail(to: 'to@example.com', subject: @subject)
+    mail(to: ENV["ADMIN_EMAIL"], subject: @subject)
   end
 end
