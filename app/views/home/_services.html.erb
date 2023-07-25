@@ -6,11 +6,11 @@
     </div>
 
     <div class="services">
-      <% @service.service_items.each do |service_item| %>
+      <% @service.service_items.each_with_index do |service_item, index| %>
         <div class="service">
           <div class="service__icon">
             <%# <%= image_tag url_for(service_item.icon), alt: service_item.title %>
-            <%= image_tag "#{service_item.service_icon.present? ? service_icon : "web-dev-lg.svg"}", alt: service_item.title %>
+            <%= image_tag "#{service_item.service_icon.present? ? service_icon : "service-#{((index > 4) ? 1 : (index+1))}.svg" }", alt: service_item.title %>
           </div>
           <h2 class="service__title"><%= service_item.title %></h2>
           <div class="service__description"><%= service_item.description %></div>
