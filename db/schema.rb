@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_01_214956) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_25_193943) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -112,6 +112,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_214956) do
     t.bigint "team_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "member_image"
     t.index ["team_id"], name: "index_members_on_team_id"
   end
 
@@ -121,7 +122,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_214956) do
     t.bigint "portfolio_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "hide_demo_link", default: false
+    t.boolean "hide_demo_link", default: true
+    t.string "portfolio_item_image"
     t.index ["portfolio_id"], name: "index_portfolio_items_on_portfolio_id"
   end
 
@@ -137,6 +139,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_01_214956) do
     t.bigint "service_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "service_icon"
     t.index ["service_id"], name: "index_service_items_on_service_id"
   end
 

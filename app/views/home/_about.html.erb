@@ -23,7 +23,8 @@
     <div class="column-2">
       <div class="bg-gradient"></div>
       <div class="service service-1">
-        <%= image_tag url_for(@about.icon_one), class: 'icon', alt: 'Web Development' %>
+        <%# <%= image_tag url_for(@about.icon_one), class: 'icon', alt: 'Web Development' %>
+        <%= image_tag "web-dev-sm.png", class: 'icon', alt: 'Web Development' %>
         <div class="content">
           <h2><%= @about.title_one %></h2>
           <span><%= @about.description_one %></span>
@@ -31,7 +32,8 @@
       </div>
 
       <div class="service service-2">
-        <%= image_tag url_for(@about.icon_two), class: 'icon', alt: 'App Development' %>
+        <%# <%= image_tag url_for(@about.icon_two), class: 'icon', alt: 'App Development' %>
+        <%= image_tag "app-dev-sm.png", class: 'icon', alt: 'App Development' %>
         <div class="content">
           <h2><%= @about.title_two %></h2>
           <span><%= @about.description_two %></span>
@@ -39,7 +41,8 @@
       </div>
 
       <div class="service service-3">
-        <%= image_tag url_for(@about.icon_three), class: 'icon', alt: 'SEO' %>
+        <%# <%= image_tag url_for(@about.icon_three), class: 'icon', alt: 'SEO' %>
+        <%= image_tag "seo-sm.png", class: 'icon', alt: 'SEO' %>
         <div class="content">
           <h2><%= @about.title_three %></h2>
           <span><%= @about.description_three %></span>
@@ -47,7 +50,8 @@
       </div>
 
       <div class="service service-4">
-        <%= image_tag url_for(@about.icon_four), class: 'icon', alt: 'Digital Marketing' %>
+        <%# <%= image_tag url_for(@about.icon_four), class: 'icon', alt: 'Digital Marketing' %>
+        <%= image_tag "digital-marketing-sm.png", class: 'icon', alt: 'Digital Marketing' %>
         <div class="content">
           <h2><%= @about.title_four %></h2>
           <span><%= @about.description_four %></span>
@@ -55,7 +59,8 @@
       </div>
 
       <div class="diamond-circle">
-        <%= image_tag url_for(@about.diamond_icon), alt: 'Diamond' %>
+        <%# <%= image_tag url_for(@about.diamond_icon), alt: 'Diamond' %>
+        <%= image_tag "diamond.svg", alt: 'Diamond' %>
       </div>
     </div>
   </div>

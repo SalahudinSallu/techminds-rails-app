@@ -15,7 +15,7 @@ ActiveAdmin.register Service do
   # end
 
   permit_params :description,
-                service_items_attributes: %i[id title description icon _destroy]
+                service_items_attributes: %i[id title description service_icon icon _destroy]
 
   show do
     attributes_table do
@@ -25,9 +25,10 @@ ActiveAdmin.register Service do
       table_for service.service_items do
         column :title
         column :description
-        column :icon do |service_item|
-          image_tag url_for(service_item.icon)
-        end
+        column :service_icon
+        # column :icon do |service_item|
+        #   image_tag url_for(service_item.icon)
+        # end
       end
     end
   end
@@ -42,7 +43,8 @@ ActiveAdmin.register Service do
                                    new_record: 'New Service' do |a|
           a.input :title
           a.input :description
-          a.input :icon, as: :file
+          a.input :service_icon
+          # a.input :icon, as: :file
         end
       end
     end

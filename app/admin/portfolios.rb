@@ -14,7 +14,7 @@ ActiveAdmin.register Portfolio do
   #   permitted
   # end
   permit_params :description,
-                portfolio_items_attributes: %i[id title description image hide_demo_link _destroy]
+                portfolio_items_attributes: %i[id title description portfolio_item_image image hide_demo_link _destroy]
 
   show do
     attributes_table do
@@ -24,9 +24,10 @@ ActiveAdmin.register Portfolio do
       table_for portfolio.portfolio_items do
         column :title
         column :description
-        column :image do |portfolio_item|
-          image_tag url_for(portfolio_item.image)
-        end
+        column :portfolio_item_image
+        # column :image do |portfolio_item|
+        #   image_tag url_for(portfolio_item.image)
+        # end
       end
     end
   end
@@ -41,7 +42,8 @@ ActiveAdmin.register Portfolio do
                                      new_record: 'New Project' do |a|
           a.input :title
           a.input :description
-          a.input :image, as: :file
+          a.input :portfolio_item_image
+          # a.input :image, as: :file
           a.input :hide_demo_link, as: :boolean
         end
       end

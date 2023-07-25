@@ -18,9 +18,9 @@ ActiveAdmin.register Home do
     attributes_table do
       row :title
       row :description
-      row :image do |home|
-        image_tag url_for(home.image), width: 400
-      end
+      # row :image do |home|
+      #   image_tag url_for(home.image), width: 400
+      # end
     end
   end
 
@@ -28,7 +28,7 @@ ActiveAdmin.register Home do
     f.inputs do
       f.input :title
       f.input :description
-      f.input :image, as: :file
+      # f.input :image, as: :file
     end
     f.actions
   end

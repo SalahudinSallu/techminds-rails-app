@@ -560,9 +560,11 @@ header{
     }
 
     .projects{
-      margin-block-start: 60px;
       display: flex;
-      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 27px;
+      margin-block: 43px;
 
       .project{
         display: flex;

@@ -9,10 +9,11 @@
     <div class="members">
       <div class="swiper">
         <div class="swiper-wrapper">
-          <% @team.members.each do |member| %>
+          <% @team.members.each_with_index do |member, index| %>
             <div class="swiper-slide">
               <div class="member">
-                <%= image_tag url_for(member.image), alt: 'Member Image' %>
+                <%# <%= image_tag url_for(member.image), alt: 'Member Image' %>
+                <%= image_tag "#{member.member_image.present? ? member_image : "member-#{((index > 2) ? 1 : (index+1))}.png" }", alt: member.name %>
                 <div class="member__detail">
                   <h2 class="member__name"><%= member.name %></h2>
                   <p class="member__place"><%= member.location %></p>

@@ -14,7 +14,7 @@ ActiveAdmin.register Team do
   #   permitted
   # end
   permit_params :description,
-                members_attributes: %i[id name role location image _destroy]
+                members_attributes: %i[id name role location member_image image _destroy]
 
   show do
     attributes_table do
@@ -25,9 +25,10 @@ ActiveAdmin.register Team do
         column :name
         column :role
         column :location
-        column :image do |member|
-          image_tag url_for(member.image)
-        end
+        column :member_image
+        # column :image do |member|
+        #   image_tag url_for(member.image)
+        # end
       end
     end
   end
@@ -43,7 +44,8 @@ ActiveAdmin.register Team do
           a.input :name
           a.input :role
           a.input :location
-          a.input :image, as: :file
+          a.input :member_image
+          # a.input :image, as: :file
         end
       end
     end
